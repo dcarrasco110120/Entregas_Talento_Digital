@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Final - Administrador de Usuarios</title>
+    <style>
+        /* Estilos básicos para organizar la página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #1a237e;
+            text-align: center;
+            margin-bottom: 6px;
+        }
+
+        p.subtitulo {
+            text-align: center;
+            color: #555;
+            margin-bottom: 24px;
+        }
+
+        /* Contenedor de botones */
+        .botones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        button {
+            padding: 10px 14px;
+            background-color: #1a237e;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        button:hover {
+            background-color: #283593;
+        }
+
+        /* Área donde se muestran los resultados */
+        #resultado {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            min-height: 100px;
+            white-space: pre-wrap; /* respeta los saltos de línea */
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        #estado {
+            text-align: center;
+            color: #888;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>👥 Administrador de Usuarios</h1>
+    <p class="subtitulo">Evaluación Final — Consumo de API REST con clases JavaScript</p>
+
+    <!-- Botones: uno por cada método de la clase -->
+    <div class="botones">
+        <button onclick="admin.listarNombres()">📋 Listar nombres</button>
+        <button onclick="admin.buscarInfoBasica()">🔍 Info básica por nombre</button>
+        <button onclick="admin.buscarDireccion()">🏠 Dirección por nombre</button>
+        <button onclick="admin.buscarInfoAvanzada()">📊 Info avanzada por nombre</button>
+        <button onclick="admin.listarCompanias()">🏢 Listar compañías y frases</button>
+        <button onclick="admin.listarNombresOrdenados()">🔤 Nombres ordenados A-Z</button>
+    </div>
+
+    <p id="estado">⏳ Cargando datos desde la API...</p>
+
+    <!-- Aquí se muestran los resultados de cada método -->
+    <div id="resultado">Los resultados aparecerán aquí.</div>
+
+    <!-- Archivo JavaScript externo con la clase AdminUsuarios -->
+    <script src="app.js"></script>
+
+</body>
+</html>
