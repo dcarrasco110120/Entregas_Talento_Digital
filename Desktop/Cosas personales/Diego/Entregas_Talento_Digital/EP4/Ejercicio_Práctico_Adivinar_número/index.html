@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- UTF-8 permite usar tildes y caracteres especiales -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el Número</title>
+    <style>
+        /* Estilos básicos para que se vea ordenado */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            padding: 40px;
+        }
+        h1 {
+            color: #333;
+        }
+        /* El div donde aparece el historial de intentos */
+        #historial {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #555;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            min-width: 300px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎯 Adivina el Número</h1>
+    <p>El computador eligió un número del 1 al 10. ¡Tienes 3 intentos para adivinarlo!</p>
+
+    <!-- Aquí el app.js va a mostrar el historial de intentos -->
+    <div id="historial">El juego comenzará en un momento...</div>
+
+    <!-- Llamo al archivo JavaScript externo -->
+    <script src="app.js"></script>
+
+</body>
+</html>
