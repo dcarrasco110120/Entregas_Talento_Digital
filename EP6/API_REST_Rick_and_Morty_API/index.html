@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- UTF-8 permite usar tildes y caracteres especiales -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0fff0;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 { color: #2e7d32; text-align: center; }
+        .botones { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+        button {
+            padding: 10px 16px;
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover { background-color: #1b5e20; }
+        .seccion {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+        h2 { color: #388e3c; border-bottom: 2px solid #a5d6a7; padding-bottom: 6px; }
+        ul { list-style: none; padding: 0; }
+        ul li { padding: 6px 0; border-bottom: 1px solid #e0e0e0; }
+        .especie-titulo { font-weight: bold; color: #1b5e20; margin-top: 12px; }
+        .ficha { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+        .ficha img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 3px solid #2e7d32;
+        }
+        .ficha-info p { margin: 4px 0; }
+        #estado { color: #888; font-style: italic; text-align: center; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>🛸 Rick and Morty API</h1>
+
+    <div class="botones">
+        <button onclick="obtenerPersonajes()">📋 Obtener personajes</button>
+        <button onclick="mostrarAgrupacion()">🔬 Agrupar por especie</button>
+        <button onclick="mostrarFicha()">🪪 Ver ficha de Rick Sanchez</button>
+    </div>
+
+    <p id="estado"></p>
+
+    <div class="seccion" id="seccion-lista" style="display:none;">
+        <h2>Lista de personajes</h2>
+        <ul id="lista-personajes"></ul>
+    </div>
+
+    <div class="seccion" id="seccion-agrupacion" style="display:none;">
+        <h2>Agrupados por especie</h2>
+        <div id="agrupacion"></div>
+    </div>
+
+    <div class="seccion" id="seccion-ficha" style="display:none;">
+        <h2>Ficha del personaje</h2>
+        <div id="ficha" class="ficha"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
